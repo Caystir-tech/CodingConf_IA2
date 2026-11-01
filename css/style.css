@@ -1,0 +1,587 @@
+:root {
+    --bg: #160739;
+    --purple: #1c0c3b;
+    --light: #f8f5ff;
+    --muted: #c8bfe4;
+    --orange: #ec9f57;
+    --border: #81789c;
+    --error: #ff9a8e;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    color: var(--light);
+
+    background-color: var(--bg);
+
+    background-image:
+        url("../assets/images/background-desktop.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    font-family: "Inconsolata", "Courier New", monospace;
+
+    line-height: 1.5;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+.site-header {
+    width: min(1100px, 92%);
+
+    margin: 0 auto;
+
+    padding: 28px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.logo-link img {
+    width: 180px;
+}
+
+
+nav {
+    display: flex;
+
+    gap: 20px;
+}
+
+
+nav a,
+.back-link {
+    color: var(--light);
+
+    text-decoration: none;
+}
+
+
+nav a:hover,
+.back-link:hover {
+    color: var(--orange);
+}
+
+
+nav a:focus-visible,
+.button:focus-visible,
+input:focus-visible,
+.upload-box:focus-within,
+.back-link:focus-visible {
+    outline: 3px solid white;
+
+    outline-offset: 3px;
+}
+
+
+.home-main,
+.form-main,
+.ticket-main {
+    width: min(1000px, 92%);
+
+    margin: 0 auto;
+}
+
+
+.hero,
+.confirmation {
+    text-align: center;
+
+    padding: 55px 20px 40px;
+}
+
+
+.hero h1,
+.form-section h1,
+.confirmation h1 {
+    max-width: 850px;
+
+    margin: 10px auto 20px;
+
+    font-size: clamp(2.2rem, 6vw, 4.4rem);
+
+    line-height: 1.05;
+}
+
+
+.small-heading {
+    color: var(--orange);
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.hero-text,
+.confirmation > p:not(.small-heading) {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: var(--muted);
+
+    font-size: 1.1rem;
+}
+
+
+.event-info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 45px;
+
+    margin: 30px 0;
+}
+
+
+.event-info div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.event-info strong {
+    color: var(--orange);
+}
+
+
+.button {
+    display: inline-block;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--orange);
+
+    color: #160b22;
+
+    padding: 14px 28px;
+
+    font: inherit;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+
+.about-section {
+    padding: 35px 0 70px;
+}
+
+
+.about-section > h2,
+.about-section > p {
+    text-align: center;
+}
+
+
+.about-section > p {
+    color: var(--muted);
+}
+
+
+.feature-list {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.feature-list article {
+    padding: 24px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+
+.feature-list h3 {
+    color: var(--orange);
+}
+
+
+.form-section {
+    width: min(520px, 100%);
+
+    margin: 20px auto 70px;
+
+    text-align: center;
+}
+
+
+.form-group {
+    text-align: left;
+
+    margin: 20px 0;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--light);
+
+    font: inherit;
+}
+
+
+input::placeholder {
+    color: #aaa3b8;
+}
+
+
+input[type="file"] {
+    position: absolute;
+
+    width: 1px;
+
+    height: 1px;
+
+    overflow: hidden;
+
+    opacity: 0;
+}
+
+
+.upload-box {
+    min-height: 125px;
+
+    border: 1px dashed var(--border);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    display: flex !important;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    cursor: pointer;
+}
+
+
+.upload-box img {
+    width: 35px;
+}
+
+
+.upload-box small {
+    color: var(--muted);
+}
+
+
+.error {
+    min-height: 20px;
+
+    margin: 6px 0 0;
+
+    color: var(--error);
+
+    font-size: 0.9rem;
+}
+
+
+.form-section .button {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+
+.ticket-main {
+    padding-bottom: 70px;
+}
+
+
+.confirmation h1 span {
+    color: var(--orange);
+}
+
+
+.ticket {
+    position: relative;
+
+    width: min(620px, 100%);
+
+    margin: 20px auto 30px;
+
+    padding: 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.20),
+            rgba(105,55,150,.25)
+        );
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.3);
+}
+
+
+.ticket-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+.ticket-top img {
+    width: 180px;
+}
+
+
+.ticket-top span {
+    position: absolute;
+
+    right: 25px;
+
+    top: 25px;
+}
+
+
+.ticket-event {
+    color: var(--muted);
+
+    margin: 8px 0 35px;
+}
+
+
+.ticket-person {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.ticket-person > img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.ticket-person > img {
+    float: left;
+}
+
+.ticket-person h2 {
+    margin: 0 0 8px;
+}
+
+
+.ticket-person a {
+    color: var(--muted);
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.ticket-person a img {
+    width: 18px;
+}
+
+
+.back-link {
+    display: block;
+
+    text-align: center;
+}
+
+
+.site-footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: var(--muted);
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+}
+
+
+@media (max-width: 700px) {
+
+    body {
+        background-image:
+            url("../assets/images/background-mobile.png");
+    }
+
+
+    .site-header {
+        flex-direction: column;
+    }
+
+
+    .hero,
+    .confirmation {
+        padding-top: 25px;
+    }
+
+
+    .event-info {
+        gap: 20px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ticket {
+        padding: 22px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+
+    .ticket-top {
+    flex-direction: column;
+    gap: 15px;
+    }
+
+    .ticket-top span {
+    position: static;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+
+    .hero h1,
+    .form-section h1,
+    .confirmation h1 {
+        font-size: 2.2rem;
+    }
+
+
+    .ticket-top img {
+        width: 140px;
+    }
+
+
+    .ticket-person > img {
+        width: 58px;
+
+        height: 58px;
+    }
+}
+
+
+.form-group :is(input, .upload-box) {
+    transition:
+        border-color 0.2s,
+        background 0.2s;
+}
+
+
+.form-group :is(input, .upload-box):hover {
+    border-color: var(--orange);
+}
+
+.ticket-heading {
+    font-size: 32px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}

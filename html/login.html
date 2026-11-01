@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coding Conf - Registration</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+    <header class="site-header">
+
+        <a href="index.html" class="logo-link">
+            <img src="../assets/images/logo-full.svg" alt="Coding Conf logo">
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="login.html">
+                Register
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main class="form-main">
+
+        <section class="form-section">
+
+            <p class="small-heading">
+                CODING CONF 2026
+            </p>
+
+
+            <h1>
+                Your Journey to Coding Conf Starts Here!
+            </h1>
+
+
+            <p class="hero-text">
+                Enter your information below to get your conference ticket.
+            </p>
+
+
+
+            <form id="registrationForm" novalidate>
+
+
+                <!-- Avatar -->
+
+                <div class="form-group">
+
+                    <label for="avatar">
+                        Upload Avatar
+                    </label>
+
+
+                    <label class="upload-box" for="avatar">
+
+                        <img
+                            src="../assets/images/icon-upload.svg"
+                            alt=""assets
+                        >
+
+                        <span>
+                            Click to upload an image
+                        </span>
+
+                        <small>
+                            JPG or PNG, maximum size 500KB
+                        </small>
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="avatar"
+                        name="avatar"
+                        accept="image/jpeg,image/png"
+                        aria-describedby="avatarError"
+                    >
+
+
+                    <p class="error" id="avatarError"></p>
+
+                </div>
+
+
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Your full name"
+                        aria-describedby="nameError"
+                    >
+                    
+
+
+                    <p class="error" id="nameError"></p>
+
+                </div>
+
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        aria-describedby="emailError"
+                    >
+
+
+                    <p class="error" id="emailError"></p>
+
+                </div>
+
+
+
+                <!-- GitHub -->
+
+                <div class="form-group">
+
+                    <label for="github">
+                        GitHub Username
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="github"
+                        name="github"
+                        placeholder="@yourusername"
+                        aria-describedby="githubError"
+                    >
+
+
+                    <p class="error" id="githubError"></p>
+
+                </div>
+
+
+
+                <button type="submit" class="button">
+                    Generate My Ticket
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <footer class="site-footer">
+
+        <p>
+            Coding Conf 2026 &copy; All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="../js/validation.js"></script>
+
+</body>
+
+</html>
